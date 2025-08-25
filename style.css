@@ -1,3 +1,85 @@
-p{
-    color:red;
+/* Dark theme background */
+body {
+  font-family: "Segoe UI", sans-serif;
+  text-align: center;
+  background: #121212; /* Dark background */
+  color: #f1f1f1;      /* Light text */
+  margin: 0;
+  padding: 20px;
+  height: 100vh;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+  color: #ffcc00; /* Golden accent */
+  text-shadow: 2px 2px 6px rgba(255, 204, 0, 0.5);
+}
+
+/* Game Board */
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 120px);
+  gap: 12px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+/* Each Cell */
+.cell {
+  width: 120px;
+  height: 120px;
+  font-size: 2.5em;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e1e1e;  /* Dark grey */
+  color: #e0e0e0;       /* Light text */
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.6);
+}
+
+/* Hover effect */
+.cell:hover {
+  background: #292929;
+  transform: scale(1.05);
+}
+
+/* Winner Highlight */
+.winner {
+  background: #4caf50 !important; /* Green highlight */
+  color: white !important;
+}
+
+/* Status */
+#status {
+  font-size: 22px;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #ffcc00;
+  text-shadow: 1px 1px 4px rgba(255,204,0,0.6);
+}
+
+/* Restart Button */
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px;
+  background: #ff5722; /* Orange accent */
+  color: white;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.4);
+}
+
+button:hover {
+  background: #e64a19;
+  transform: scale(1.05);
 }
